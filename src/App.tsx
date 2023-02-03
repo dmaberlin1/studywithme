@@ -55,9 +55,9 @@ function App() {
             <Timer seconds={s} minutes={m}></Timer>
           </div>
           <div className={styles.wrapperSettings}>
-              <Button >start</Button>
-              <Button ><img src={Restart} alt="config"/></Button>
-              <Button onClick={()=>openConfig()} ><img src={Config} alt="config"/></Button>
+              {/*<Button >start</Button>*/}
+              {/*<Button ><img src={Restart} alt="config"/></Button>*/}
+              <Button maxHeight={'95px'} onClick={()=>openConfig()} ><img src={Config} alt="config"/></Button>
           </div>
               <GeneralConfig close={closeConfig} display={show}></GeneralConfig>
       </div>
