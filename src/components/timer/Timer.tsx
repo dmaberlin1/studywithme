@@ -14,6 +14,7 @@ const Timer = ({minutes=30,seconds=0}:IPropsTimer):JSX.Element => {
 
 
 
+
     const tick=()=> {
         if(pause || over) return
         if(m===0 && s===0){
@@ -38,10 +39,7 @@ const Timer = ({minutes=30,seconds=0}:IPropsTimer):JSX.Element => {
         const timerId=setInterval(()=>tick(),1000)
         return ()=>clearInterval(timerId)
     });
-    useEffect(() => {
-        const timerId=setInterval(()=>tick(),1000)
-        return ()=>clearInterval(timerId)
-    },[]);
+
 
 
 
@@ -52,12 +50,20 @@ const Timer = ({minutes=30,seconds=0}:IPropsTimer):JSX.Element => {
             <p className={styles.p}>{m.toString().padStart(2,'0')}:</p>
             <p className={styles.p}>{s.toString().padStart(2,'0')}</p>
             </div>
+            <div className={styles.wrapperBtnTimers}>
+                <Button onClick={()=>setTime([30,0])}>pomodoro</Button>
+                <Button onClick={()=>setTime([5,0])}>short break</Button>
+                <Button onClick={()=>setTime([10,0])}>long break</Button>
+            </div>
             <div className={styles.wrapperBtn}>
+
                 <Button maxWidth={'110px'}
                         maxHeight={'70px'}
                         onClick={()=>setPause(!pause)}
                 >{pause? 'start':'pause'}</Button>
-                <Button  maxWidth={'100px'} maxHeight={'30px'} onClick={()=>reset()}><img src={RestartIn} alt="restart"/></Button>
+                <Button
+                    maxWidth={'100px'} maxHeight={'30px'}
+                    onClick={()=>reset()}><img src={RestartIn} alt="restart"/></Button>
             </div>
         </div>
     );

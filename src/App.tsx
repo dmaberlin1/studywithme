@@ -46,11 +46,11 @@ function App() {
       <div  className={styles.app} style={{backgroundImage:`url(${SkyBlue})`}}>
           <img className={styles.logo} src={Logo} alt="logo"/>
           <div className={styles.wrapperApp}>
-            <div className={styles.wrapper}>
-                <Button onClick={()=>setPomodoro()}>pomodoro</Button>
-                <Button onClick={()=>setShortBreak()}>short break</Button>
-                <Button onClick={()=>setLongBreak()}>long break</Button>
-            </div>
+            {/*<div className={styles.wrapper}>*/}
+            {/*    <Button onClick={()=>setPomodoro()}>pomodoro</Button>*/}
+            {/*    <Button onClick={()=>setShortBreak()}>short break</Button>*/}
+            {/*    <Button onClick={()=>setLongBreak()}>long break</Button>*/}
+            {/*</div>*/}
           <div className={styles.wrapperTimer}>
             <Timer seconds={s} minutes={m}></Timer>
           </div>
