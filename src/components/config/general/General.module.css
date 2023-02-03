@@ -1,0 +1,64 @@
+.wrapperMain{
+    display: flex;
+position: center;
+margin:auto;
+max-width: 600px;
+border-radius: 20px;
+width: 550px;
+height: 650px;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+/*background-color: rgb(0, 60, 114);*/
+/*background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);*/
+    background: linear-gradient(to right, #5f2c82, #49a09d);
+
+/*    background: linear-gradient(to right, #003973, #e5e5be);*/
+}
+
+
+
+
+
+
+/*.sideMenu{*/
+/*    display: flex;*/
+/*    position: absolute;*/
+/*    left: 20px;*/
+/*    top: 50px;*/
+/*    flex-direction: column;*/
+/*    padding: 5px;*/
+/*    margin-top: 2px;*/
+/*    height: 200px;*/
+/*    width: 150px;*/
+
+/*}*/
+/*.SetConfig{*/
+/*    padding: 5px;*/
+/*    margin-top: 15px;*/
+/*    text-align: center;*/
+/*    font-weight: 600;*/
+/*    font-size: 22px;*/
+/*    !*background: linear-gradient(to right, #d53369, #7b98b6);*!*/
+/*    background: linear-gradient(to right, #5f2c82, #49a09d);*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*    border-radius: 20px;*/
+
+
+/*}*/
+/*.SetConfig:hover{*/
+
+/*    background: linear-gradient(to right, rgba(255, 110, 127, 0.5), #bfe9ff);*/
+/*    !*background: linear-gradient(to right, #ff6e7f, #bfe9ff);*!*/
+
+
+
+/*    border-radius: 20px;*/
+/*}*/
+/*.SetConfig:focus{*/
+
+/*    background: linear-gradient(to right, rgba(255, 110, 127, 0.8), #bfe9ff);*/
+
+/*    border-radius: 20px;*/
+/*}*/
