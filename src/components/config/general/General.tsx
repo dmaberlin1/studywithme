@@ -1,14 +1,13 @@
 import React from 'react';
-import Button from "../../button/Button";
-
-
-const General = () => {
+import style from './General.module.css'
+import styles from './General.module.css'
+const General = (props:any) => {
+    const {setConfigPage}=props
     return (
-       <>
-        <Button>pomodoro</Button>
-        <Button>short break</Button>
-        <Button>long break</Button>
-       </>
+        <div className={styles.wrapperMain}>
+            general options
+
+        </div>
     );
 };
 

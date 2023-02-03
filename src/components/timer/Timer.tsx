@@ -6,10 +6,13 @@ import input = Simulate.input;
 import Button from "../button/Button";
 import RestartIn from '../../assets/img/icons/restartInTimer.svg'
 
-const Timer = ({minutes=25,seconds=0}:IPropsTimer):JSX.Element => {
+const Timer = ({minutes=30,seconds=0}:IPropsTimer):JSX.Element => {
     const [pause, setPause] = useState(false);
     const [over, setOver] = useState(false);
     const [[m,s], setTime] = useState([minutes,seconds]);
+
+
+
 
     const tick=()=> {
         if(pause || over) return
@@ -35,6 +38,10 @@ const Timer = ({minutes=25,seconds=0}:IPropsTimer):JSX.Element => {
         const timerId=setInterval(()=>tick(),1000)
         return ()=>clearInterval(timerId)
     });
+    useEffect(() => {
+        const timerId=setInterval(()=>tick(),1000)
+        return ()=>clearInterval(timerId)
+    },[]);
 
 
 
@@ -49,7 +56,7 @@ const Timer = ({minutes=25,seconds=0}:IPropsTimer):JSX.Element => {
                 <Button maxWidth={'110px'}
                         maxHeight={'70px'}
                         onClick={()=>setPause(!pause)}
-                >{pause? 'return':'pause'}</Button>
+                >{pause? 'start':'pause'}</Button>
                 <Button  maxWidth={'100px'} maxHeight={'30px'} onClick={()=>reset()}><img src={RestartIn} alt="restart"/></Button>
             </div>
         </div>

@@ -1,9 +1,9 @@
 import React from 'react';
-
-const Timers = () => {
+import styles from './Timers.module.css'
+const Timers = (props:any) => {
     return (
-        <div>
-
+        <div className={styles.wrapperMain}>
+        timers options
         </div>
     );
 };

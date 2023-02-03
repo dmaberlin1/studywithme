@@ -1,9 +1,10 @@
 import React from 'react';
-
-const Sounds = () => {
+import style from './Sounds.module.css'
+import styles from "../general/General.module.css";
+const Sounds = (props:any) => {
     return (
-        <div>
-
+        <div className={styles.wrapperMain}>
+            sounds options
         </div>
     );
 };
