@@ -5,6 +5,7 @@ import {Simulate} from "react-dom/test-utils";
 import input = Simulate.input;
 import Button from "../button/Button";
 import RestartIn from '../../assets/img/icons/restartInTimer.svg'
+import Restart from "../../assets/img/icons/restart-svgrepo-com.svg";
 
 const Timer = ({minutes=30,seconds=0}:IPropsTimer):JSX.Element => {
     const [pause, setPause] = useState(false);
@@ -55,15 +56,15 @@ const Timer = ({minutes=30,seconds=0}:IPropsTimer):JSX.Element => {
                 <Button onClick={()=>setTime([5,0])}>short break</Button>
                 <Button onClick={()=>setTime([10,0])}>long break</Button>
             </div>
-            <div className={styles.wrapperBtn}>
 
-                <Button maxWidth={'110px'}
-                        maxHeight={'70px'}
-                        onClick={()=>setPause(!pause)}
-                >{pause? 'start':'pause'}</Button>
+            <div className={styles.wrapperBtn}>
+                <Button maxWidth={'120px'} maxHeight={'95px'} onClick={()=>setPause(!pause)}
+                >{pause? 'start':'pause'}
+                </Button>
                 <Button
-                    maxWidth={'100px'} maxHeight={'30px'}
-                    onClick={()=>reset()}><img src={RestartIn} alt="restart"/></Button>
+                    maxWidth={'100px'} maxHeight={'90px'}
+                    onClick={()=>reset()}><img src={Restart} alt="restart"/>
+                </Button>
             </div>
         </div>
     );
